@@ -98,7 +98,7 @@ class AugmentProperties
             }
 
             // ok, so we possibly have a type or ref
-            if (!Generator::isDefault($property->ref) && $typeMatches[2] === '' && $property->nullable) {
+            if (!Generator::isDefault($property->ref) && $typeMatches[2] === '' && $property->nullable === true) {
                 $refKey = $this->toRefKey($context, $type);
                 $property->oneOf = [
                     new Schema([
